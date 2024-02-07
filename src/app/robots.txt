@@ -1,0 +1,22 @@
+User-Agent: *
+Disallow: /cart
+Disallow: /account
+Disallow: /orders
+Disallow: /order-details
+Allow: /
+Allow: /shop
+Allow: /contact
+Allow: /login
+Allow: /signup
+Disallow: /identity
+Disallow: /address
+Disallow: /add-address
+Allow: /product
+Allow: /about
+Disallow: /wishlist
+Disallow: /order-completed
+Allow: /privacy-policy
+Allow: /terms-conditions
+Allow: /refund-policy
+
+Sitemap: https://www.smart-store.co.in/sitemap.xml
