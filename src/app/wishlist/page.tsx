@@ -12,28 +12,29 @@ import Header from "../components/Header";
 import NewsLetter from "../components/NewsLetter";
 import Footer from "../components/Footer";
 import { useRouter } from "next/navigation";
+import withAuth from "../utils/PrivateRoutes";
 
-export default function Wishlist() {
-  const { currentUser } = useAuth();
+function Wishlist() {
+  const { currentUser /* , brands, brandLoading */ } = useAuth();
   const router = useRouter();
 
   const { error, loading, userData: wishlists } = useGetReq("/wishlist", {});
 
-  const {
-    error: _error,
-    loading: _loading,
-    userData: brands,
-  } = useGetReq("/brands", {});
+  // const {
+  //   error: _error,
+  //   loading: _loading,
+  //   userData: brands,
+  // } = useGetReq("/brands", {});
 
-  if (error || _error) {
-    toast.error(error || _error, {
+  if (error) {
+    toast.error(error, {
       position: "top-right",
     });
   }
 
   return currentUser ? (
-    <ToastProvider>
-      <Header loading={loading} brands={brands} />
+    <>
+      <Header /* loading={brandLoading} brands={brands}  */ />
       <div
         className="d-flex justify-content-center align-items-center text-center"
         style={{
@@ -69,8 +70,10 @@ export default function Wishlist() {
       </div>
       <NewsLetter />
       <Footer />
-    </ToastProvider>
+    </>
   ) : (
     router.push("/login")
   );
 }
+
+export default withAuth(Wishlist);

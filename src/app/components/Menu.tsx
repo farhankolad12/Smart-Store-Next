@@ -1,15 +1,18 @@
 import Link from "next/link";
 import useGetReq from "../hooks/useGetReq";
 import { toast } from "react-toastify";
+import { useAuth } from "../context/AuthContext";
 
 export default function Menu() {
-  const { error, loading, userData: categories } = useGetReq("/categories", {});
+  /*   const { error, loading, userData: categories } = useGetReq("/categories", {}); */
 
-  if (error) {
+  /*   if (error) {
     toast.error(error, {
       position: "top-right",
     });
-  }
+  } */
+
+  const { filtersLoading: loading, filters } = useAuth();
 
   return (
     <div
@@ -48,7 +51,7 @@ export default function Menu() {
             <div className="d-flex flex-column gap-3 my-3">
               {loading
                 ? "loading..."
-                : categories.map((cat: { name: string }) => {
+                : filters.categories?.map((cat: { name: string }) => {
                     return (
                       <Link
                         key={cat.name}

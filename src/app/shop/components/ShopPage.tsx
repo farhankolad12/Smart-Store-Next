@@ -17,6 +17,7 @@ import MultiRangeSlider from "./MultiRangeSlider";
 import { formatCurrency } from "@/app/utils/formatCurrency";
 import FilterShopMobile from "./FilterShopMobile";
 import { useDebouncedCallback } from "use-debounce";
+import { useAuth } from "@/app/context/AuthContext";
 
 export default function ShopPage() {
   const router = useRouter();
@@ -33,11 +34,13 @@ export default function ShopPage() {
     Number(searchParams.get("max")) || 50000
   );
 
-  const {
-    error: _error,
-    loading: _loading,
-    userData: filters,
-  } = useGetReq("/filters", {});
+  // const {
+  //   error: _error,
+  //   loading: _loading,
+  //   userData: filters,
+  // } = useGetReq("/filters", {});
+
+  const { filters, filtersLoading } = useAuth();
 
   const {
     error,
@@ -100,7 +103,7 @@ export default function ShopPage() {
     router.replace(`/shop?${params.toString()}`);
   }, 1000);
 
-  return _loading ? (
+  return filtersLoading ? (
     <ShopSkeleton />
   ) : (
     <div className="container d-flex gap-5 my-5">
@@ -110,7 +113,7 @@ export default function ShopPage() {
             <strong className="text-uppercase">collection</strong>
           </div>
           <div className="d-flex flex-column gap-1 bg-light p-3">
-            {filters.categories.map((category: any) => {
+            {filters.categories?.map((category: any) => {
               return (
                 <CollectionsFilter
                   key={category._id}
@@ -128,7 +131,7 @@ export default function ShopPage() {
           <div className="my-3 px-3">
             <span className="text-uppercase fw-bold">brand</span>
             <div className="d-flex flex-column gap-2 mt-2">
-              {filters.brands.map((brand: any) => {
+              {filters.brands?.map((brand: any) => {
                 return (
                   <BrandFilter
                     key={brand._id}

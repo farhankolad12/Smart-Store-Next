@@ -1,6 +1,7 @@
 import Carousel from "nuka-carousel";
 import Link from "next/link";
 import BrandSkeleton from "./BrandSkeleton";
+import { useAuth } from "../context/AuthContext";
 
 export type BrandType = {
   _id: string;
@@ -8,13 +9,15 @@ export type BrandType = {
   img: { id: string; link: string };
 };
 
-export default function ShopByBrands({
+export default function ShopByBrands(/* {
   brands,
   loading,
 }: {
   brands: any | undefined;
   loading: boolean | undefined;
-}) {
+} */) {
+  const { filters, filtersLoading: loading } = useAuth();
+
   const PAGE_WIDTH = window.innerWidth;
   return (
     <div className="bg-white py-5 my-5">
@@ -46,8 +49,8 @@ export default function ShopByBrands({
             })}
           </Carousel>
         ) : (
-          brands &&
-          brands.length && (
+          filters.brands &&
+          filters.brands.length && (
             <Carousel
               enableKeyboardControls={true}
               pauseOnHover={true}
@@ -58,7 +61,7 @@ export default function ShopByBrands({
               slidesToShow={PAGE_WIDTH >= 768 ? 5 : 1}
               wrapAround={true}
             >
-              {brands.map((brand: BrandType) => {
+              {filters.brands.map((brand: BrandType) => {
                 return (
                   <Link
                     key={brand._id}
@@ -69,7 +72,16 @@ export default function ShopByBrands({
                         : "d-flex flex-column align-items-center justify-content-center text-center"
                     }`}
                   >
-                    <img src={brand.img.link} width="100px" alt={brand.name} />
+                    <img
+                      src={brand.img.link}
+                      width="100px"
+                      alt={brand.name}
+                      style={{
+                        aspectRatio: "3/2",
+                        mixBlendMode: "color-burn",
+                        objectFit: "contain",
+                      }}
+                    />
                   </Link>
                 );
               })}

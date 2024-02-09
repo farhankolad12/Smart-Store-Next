@@ -6,7 +6,7 @@ import Carousel from "./components/Carousel";
 import Header from "./components/Header";
 import LatestProd from "./components/LatestProd";
 import OurServices from "./components/OurServices";
-import AuthContext from "./context/AuthContext";
+import AuthContext, { useAuth } from "./context/AuthContext";
 import useGetReq from "./hooks/useGetReq";
 import Footer from "./components/Footer";
 import NewsLetter from "./components/NewsLetter";
@@ -15,21 +15,17 @@ import CustomerReviews from "./components/CustomerReviews";
 import ShopByBrands from "./components/ShopByBrands";
 
 export default function Home() {
-  const {
-    error: error,
-    loading: loading,
-    userData: brands,
-  } = useGetReq("/brands", {});
+  const { _error: filtersError } = useAuth();
 
-  if (error) {
-    toast.error(error, {
+  if (filtersError) {
+    toast.error(filtersError, {
       position: "top-right",
     });
   }
 
   return (
-    <ToastProvider>
-      <Header loading={loading} brands={brands} />
+    <>
+      <Header /* loading={brandLoading} brands={brands} */ />
       <main>
         <article>
           <Carousel />
@@ -37,12 +33,12 @@ export default function Home() {
           <OurServices />
           <LatestProd />
           <CustomerReviews />
-          <ShopByBrands brands={brands} loading={loading} />
+          <ShopByBrands /* brands={brands} loading={brandLoading} */ />
         </article>
       </main>
 
       <NewsLetter />
       <Footer />
-    </ToastProvider>
+    </>
   );
 }

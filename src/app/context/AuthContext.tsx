@@ -23,6 +23,9 @@ type ValueType = {
   setCartItems: Function;
   makeReq: number;
   setMakeReq: Function;
+  filters: any;
+  filtersLoading: boolean;
+  _error: string;
 };
 
 const AuthProvider = React.createContext<ValueType>(null!);
@@ -42,6 +45,12 @@ export default function AuthContext({ children }: { children: ReactNode }) {
     setUserData: setCartItems,
     error,
   } = useGetReq("/cart", { makeReq });
+
+  const {
+    error: _error,
+    loading: _loading,
+    userData: filters,
+  } = useGetReq("/filters", {});
 
   async function authStateChange() {
     setLoading(true);
@@ -80,11 +89,14 @@ export default function AuthContext({ children }: { children: ReactNode }) {
     error,
     makeReq,
     setMakeReq,
+    filtersLoading: _loading,
+    filters,
+    _error,
   };
 
   return (
     <AuthProvider.Provider value={value}>
-      {!loading && children}
+      {(!loading || !cartLoading || !_loading) && children}
     </AuthProvider.Provider>
   );
 }

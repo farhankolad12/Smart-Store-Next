@@ -11,21 +11,21 @@ import { toast } from "react-toastify";
 import { useRef } from "react";
 import CartCanvas from "./CartCanvas";
 
-export default function DesktopHeader({ brands }: { brands: any }) {
+export default function DesktopHeader(/* { brands }: { brands: any } */) {
   const { cartItems } = useAuth();
 
   const router = useRouter();
   const searchRef = useRef<HTMLInputElement>(null);
 
-  const { error, loading, userData: categories } = useGetReq("/categories", {});
+  // const { error, loading, userData: categories } = useGetReq("/categories", {});
 
-  const { currentUser } = useAuth();
+  const { currentUser, filters, filtersLoading } = useAuth();
 
-  if (error) {
-    toast.error(error, {
-      position: "top-right",
-    });
-  }
+  // if (error) {
+  //   toast.error(error, {
+  //     position: "top-right",
+  //   });
+  // }
 
   return (
     <>
@@ -36,31 +36,34 @@ export default function DesktopHeader({ brands }: { brands: any }) {
             <button className="dropbtn btn p-0">Watches</button>
             <div className="dropdown-content p-3">
               <div className="d-flex justify-content-between gap-5">
-                {loading
+                {filtersLoading
                   ? ""
-                  : categories &&
-                    categories.map((cat: any) => {
+                  : filters.categories &&
+                    filters.categories.map((cat: any) => {
                       return (
                         <div key={cat.name}>
                           <strong className="fs-5 border-bottom pb-2">
                             {cat.name}
                           </strong>
                           <div className="d-flex flex-column gap-3 mt-3">
-                            {loading
+                            {filtersLoading
                               ? "loading..."
-                              : brands.map((brand: { name: string }) => {
-                                  return (
-                                    <Link
-                                      href={`/shop?brands=${brand.name.toLowerCase()}&collections=${cat.name
-                                        .split(" ")[0]
-                                        .toLowerCase()}`}
-                                      key={brand.name}
-                                      className="text-dark"
-                                    >
-                                      {brand.name}
-                                    </Link>
-                                  );
-                                })}
+                              : filters.brands &&
+                                filters.brands.map(
+                                  (brand: { name: string }) => {
+                                    return (
+                                      <Link
+                                        href={`/shop?brands=${brand.name.toLowerCase()}&collections=${cat.name
+                                          .split(" ")[0]
+                                          .toLowerCase()}`}
+                                        key={brand.name}
+                                        className="text-dark"
+                                      >
+                                        {brand.name}
+                                      </Link>
+                                    );
+                                  }
+                                )}
                           </div>
                         </div>
                       );
