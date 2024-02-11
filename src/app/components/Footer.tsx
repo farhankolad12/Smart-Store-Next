@@ -62,7 +62,7 @@ export default function Footer() {
           <div className="text-light d-flex flex-column mt-3">
             <span className="fs-5 fw-bold mb-2">Our Company</span>
             <div className="d-flex flex-column gap-2 ">
-              <Link href="/contact-us" className="text-light">
+              <Link href="/contact" className="text-light">
                 Contact Us
               </Link>
               <Link href="/shop" className="text-light">

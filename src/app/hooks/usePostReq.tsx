@@ -9,7 +9,7 @@ export default function usePostReq(url: string) {
     setLoading(true);
     const headers = new Headers();
 
-    if (payload.toString().includes("formData")) {
+    if (payload.toString().includes("FormData")) {
       headers.append(
         "Access-Control-Allow-Origin",
         process.env.NEXT_PUBLIC_BACKEND_HOSTNAME || ""

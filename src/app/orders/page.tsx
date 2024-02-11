@@ -5,7 +5,6 @@ import NewsLetter from "../components/NewsLetter";
 import Footer from "../components/Footer";
 import WithAuth from "../utils/PrivateRoutes";
 import OrdersPage from "./components/OrdersPage";
-// import IdentityPage from "./components/IdentityPage";
 
 const Orders = () => {
   return (

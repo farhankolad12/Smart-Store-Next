@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, use } from "react";
+import { useState, useEffect, useRef } from "react";
 import { notFound, useParams } from "next/navigation";
 import Link from "next/link";
 import { formatCurrency } from "@/app/utils/formatCurrency";
@@ -11,11 +11,11 @@ import WishlistButton from "@/app/components/WishlistButton";
 import ProductCom from "@/app/components/ProductCom";
 import { ProductType } from "@/app/components/LatestProd";
 import ProductPageSkeleton from "./components/ProductPageSkeleton";
-import Head from "next/head";
-// import { Metadata, ResolvingMetadata } from "next";
-// import ProductPageSkeleton from "../components/Loading/ProductPageSkeleton";
+import Header from "@/app/components/Header";
+import NewsLetter from "@/app/components/NewsLetter";
+import Footer from "@/app/components/Footer";
 
-export default async function Product() {
+export default function Product() {
   const { id } = useParams();
   const { loading, userData: product } = useGetReq("/product", { id });
 
@@ -39,9 +39,7 @@ export default async function Product() {
     <ProductPageSkeleton />
   ) : product ? (
     <>
-      <Head>
-        <title>{product.name || "Smart Store"}</title>
-      </Head>
+      <Header />
       <div
         className="d-flex justify-content-center align-items-center text-center"
         style={{
@@ -414,6 +412,8 @@ export default async function Product() {
           </div>
         </div>
       </main>
+      <NewsLetter />
+      <Footer />
     </>
   ) : (
     notFound()

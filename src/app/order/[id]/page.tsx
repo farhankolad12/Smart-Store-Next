@@ -14,6 +14,7 @@ import { formatCurrency } from "@/app/utils/formatCurrency";
 import MessageForm from "./components/MessageForm";
 import ReviewModal from "./components/ReviewModal";
 import withAuth from "@/app/utils/PrivateRoutes";
+import Header from "@/app/components/Header";
 
 const OrderDetail = () => {
   const [isReview, setIsReview] = useState(false);
@@ -29,6 +30,7 @@ const OrderDetail = () => {
 
   return (
     <>
+      <Header />
       <div
         className="d-flex justify-content-center align-items-center text-center"
         style={{

@@ -37,6 +37,7 @@ export default function ProductPageSkeleton() {
               {[...Array(3)].map(() => {
                 return (
                   <svg
+                    key={Math.random()}
                     className="bd-placeholder-img card-img-top"
                     width="100%"
                     height="180"
@@ -191,7 +192,7 @@ export default function ProductPageSkeleton() {
             </div>
             <div className="product-rows">
               {[...Array(3)].map(() => {
-                return <ProductSkeleton />;
+                return <ProductSkeleton key={Math.random()} />;
               })}
             </div>
           </div>

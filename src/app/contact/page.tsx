@@ -7,8 +7,6 @@ import usePostReq from "../hooks/usePostReq";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NewsLetter from "../components/NewsLetter";
-import useGetReq from "../hooks/useGetReq";
-import { useAuth } from "../context/AuthContext";
 
 export default function ContactUs() {
   const subjectRef = useRef<HTMLSelectElement>(null);
@@ -17,20 +15,6 @@ export default function ContactUs() {
   const messageRef = useRef<HTMLTextAreaElement>(null);
 
   const { execute, loading } = usePostReq("/contact-us");
-
-  // const { brands, brandLoading } = useAuth();
-
-  // const {
-  //   error: _error,
-  //   loading: _loading,
-  //   userData: brands,
-  // } = useGetReq("/brands", {});
-
-  // if (_error) {
-  //   toast.error(_error, {
-  //     position: "top-right",
-  //   });
-  // }
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -44,7 +28,9 @@ export default function ContactUs() {
       const formData = new FormData();
       formData.append("subject", subject || "");
       formData.append("email", email || "");
-      formData.append("attachment", attachment || "");
+      if (attachment) {
+        formData.append("attachment", attachment);
+      }
       formData.append("message", message || "");
 
       const res = await execute(formData);
@@ -59,6 +45,8 @@ export default function ContactUs() {
         position: "top-right",
       });
     } catch (err: any) {
+      console.log(err);
+
       return toast.error(err.message, {
         position: "top-right",
       });

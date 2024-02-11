@@ -1,17 +1,9 @@
 import Link from "next/link";
 import DesktopHeader from "./DesktopHeader";
 import MobileHeader from "./MobileHeader";
-// import MobileHeader from "./MobileHeader";
 
-export default function Header(/* {
-  brands,
-  loading,
-}: {
-  brands: any;
-  loading: boolean;
-} */) {
+export default function Header() {
   return (
-    /* !loading && ( */
     <header>
       <div className="bg-dark py-3 d-flex align-items-center justify-content-center">
         <Link href="/wishlist" className="text-light border-end pe-3 fw-bold">
@@ -27,5 +19,4 @@ export default function Header(/* {
       </>
     </header>
   );
-  /*  ); */
 }

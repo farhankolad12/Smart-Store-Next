@@ -3,7 +3,6 @@
 import Header from "../components/Header";
 import NewsLetter from "../components/NewsLetter";
 import Footer from "../components/Footer";
-import AccountPage from "../components/AccountPage";
 import WithAuth from "../utils/PrivateRoutes";
 import IdentityPage from "./components/IdentityPage";
 

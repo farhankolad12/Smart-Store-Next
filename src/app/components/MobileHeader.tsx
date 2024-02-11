@@ -1,3 +1,5 @@
+"use client";
+
 import { useRouter } from "next/navigation";
 // import Logo from "../Home/Logo";
 import Menu from "./Menu";
