@@ -31,7 +31,7 @@ export default function AccountPage() {
       <div
         className="d-flex justify-content-center align-items-center text-center"
         style={{
-          background: "url('/assets/banner.jpg') no-repeat top",
+          background: "url(&apos;/assets/banner.jpg&apos;) no-repeat top",
           backgroundAttachment: "fixed",
           padding: "70px 15px",
         }}

@@ -18,7 +18,7 @@ export default function ResetPassword({ id }: { id: string | undefined }) {
 
     try {
       if (passRef.current?.value !== conPassRef.current?.value) {
-        return toast.error("Password don't match", {
+        return toast.error("Password don&apos;t match", {
           position: "top-right",
         });
       }
@@ -50,7 +50,7 @@ export default function ResetPassword({ id }: { id: string | undefined }) {
       <div
         className="d-flex justify-content-center align-items-center text-center"
         style={{
-          background: "url('/assets/banner.jpg') no-repeat top",
+          background: "url(&apos;/assets/banner.jpg&apos;) no-repeat top",
           backgroundAttachment: "fixed",
           padding: "70px 15px",
         }}

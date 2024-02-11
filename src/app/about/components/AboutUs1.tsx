@@ -19,11 +19,11 @@ export default function AboutUs1() {
           Welcome to <b>Smart Store Watches</b>, your go-to destination for a
           curated collection of timepieces that seamlessly blend style,
           innovation, and affordability. Established with a passion for watches
-          of all kinds, Smart Store is more than a shop. it's an experience
+          of all kinds, Smart Store is more than a shop. it&apos;s an experience
           where every tick tells a story.
         </p>
         <span>
-          Whether you're drawn to classic elegance, modern minimalism, or
+          Whether you&apos;re drawn to classic elegance, modern minimalism, or
           cutting-edge technology, we take pride in curating a selection that
           meets the unique preferences of our diverse clientele.
         </span>

@@ -33,7 +33,7 @@ export default function MultiRangeSlider({
   useEffect(() => {
     if (maxValRef.current) {
       const minPercent = getPercent(minVal);
-      const maxPercent = getPercent(+maxValRef.current.value); // Precede with '+' to convert the value from type string to type number
+      const maxPercent = getPercent(+maxValRef.current.value); // Precede with &apos;+&apos; to convert the value from type string to type number
 
       if (range.current) {
         range.current.style.left = `${minPercent}%`;

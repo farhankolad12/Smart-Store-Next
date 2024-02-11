@@ -23,7 +23,7 @@ export default function OurMission() {
           <i className="bi bi-shop text-secondary  fs-1" />
           <strong className="fs-4 ">Hub for Watch Enthusiasts</strong>
           <p className="text-secondary">
-            Smart Store Watches is more than a shop, it's a haven for watch
+            Smart Store Watches is more than a shop, it&apos;s a haven for watch
             enthusiasts.
           </p>
         </div>

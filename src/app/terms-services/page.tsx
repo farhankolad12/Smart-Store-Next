@@ -25,7 +25,7 @@ export default function TermsServices() {
 
         <p>
           Permission is granted to temporarily download one copy of the
-          materials on Smart Store's Website for personal, non-commercial
+          materials on Smart Store&apos;s Website for personal, non-commercial
           transitory viewing only. This is the grant of a license, not a
           transfer of title, and under this license you may not:
         </p>
@@ -37,8 +37,8 @@ export default function TermsServices() {
             display;
           </li>
           <li>
-            attempt to reverse engineer any software contained on Smart Store's
-            Website;
+            attempt to reverse engineer any software contained on Smart
+            Store&apos;s Website;
           </li>
           <li>
             remove any copyright or other proprietary notations from the
@@ -65,11 +65,11 @@ export default function TermsServices() {
         <h2>3. Disclaimer</h2>
 
         <p>
-          All the materials on Smart Store's Website are provided "as is". Smart
-          Store makes no warranties, may it be expressed or implied, therefore
-          negates all other warranties. Furthermore, Smart Store does not make
-          any representations concerning the accuracy or reliability of the use
-          of the materials on its Website or otherwise relating to such
+          All the materials on Smart Store&apos;s Website are provided "as is".
+          Smart Store makes no warranties, may it be expressed or implied,
+          therefore negates all other warranties. Furthermore, Smart Store does
+          not make any representations concerning the accuracy or reliability of
+          the use of the materials on its Website or otherwise relating to such
           materials or any sites linked to this Website.
         </p>
 
@@ -78,7 +78,7 @@ export default function TermsServices() {
         <p>
           Smart Store or its suppliers will not be hold accountable for any
           damages that will arise with the use or inability to use the materials
-          on Smart Store's Website, even if Smart Store or an authorize
+          on Smart Store&apos;s Website, even if Smart Store or an authorize
           representative of this Website has been notified, orally or written,
           of the possibility of such damage. Some jurisdiction does not allow
           limitations on implied warranties or limitations of liability for
@@ -88,7 +88,7 @@ export default function TermsServices() {
         <h2>5. Revisions and Errata</h2>
 
         <p>
-          The materials appearing on Smart Store's Website may include
+          The materials appearing on Smart Store&apos;s Website may include
           technical, typographical, or photographic errors. Smart Store will not
           promise that any of the materials in this Website are accurate,
           complete, or current. Smart Store may change the materials contained
@@ -102,7 +102,7 @@ export default function TermsServices() {
           Smart Store has not reviewed all of the sites linked to its Website
           and is not responsible for the contents of any such linked site. The
           presence of any link does not imply endorsement by Smart Store of the
-          site. The use of any linked website is at the user's own risk.
+          site. The use of any linked website is at the user&apos;s own risk.
         </p>
 
         <h2>7. Site Terms of Use Modifications</h2>
@@ -120,8 +120,8 @@ export default function TermsServices() {
         <h2>9. Governing Law</h2>
 
         <p>
-          Any claim related to Smart Store's Website shall be governed by the
-          laws of in without regards to its conflict of law provisions.
+          Any claim related to Smart Store&apos;s Website shall be governed by
+          the laws of in without regards to its conflict of law provisions.
         </p>
       </main>
       <Footer />

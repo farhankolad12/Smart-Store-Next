@@ -35,7 +35,7 @@ export default function OrdersPage() {
       <div
         className="d-flex justify-content-center align-items-center text-center"
         style={{
-          background: "url('/assets/banner.jpg') no-repeat top",
+          background: "url(&apos;/assets/banner.jpg&apos;) no-repeat top",
           backgroundAttachment: "fixed",
           padding: "70px 15px",
         }}
@@ -51,7 +51,8 @@ export default function OrdersPage() {
         <h3 className="fw-bold text-center my-4">Your Orders</h3>
         <div className="border p-4">
           <strong className="mb-3">
-            Here are the orders you've placed since your account was created.
+            Here are the orders you&apos;ve placed since your account was
+            created.
           </strong>
           {loading ? (
             <div className="table-responsive mt-4">

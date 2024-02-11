@@ -34,7 +34,7 @@ const OrderDetail = () => {
       <div
         className="d-flex justify-content-center align-items-center text-center"
         style={{
-          background: "url('/assets/banner.jpg') no-repeat top",
+          background: "url(&apos;/assets/banner.jpg&apos;) no-repeat top",
           backgroundAttachment: "fixed",
           padding: "70px 15px",
         }}
@@ -69,7 +69,7 @@ const OrderDetail = () => {
                 </strong>
               </div>
               <div className="border p-3">
-                <strong>FOLLOW YOUR ORDER'S STATUS STEP-BY-STEP</strong>
+                <strong>FOLLOW YOUR ORDER&apos;S STATUS STEP-BY-STEP</strong>
                 <div className="table-responsive my-3">
                   <table className="table table-bordered table-striped">
                     <thead>

@@ -9,7 +9,7 @@ export default function OrderDetailSkeleton() {
           <strong>Order Reference - placed on </strong>
         </div>
         <div className="border p-3">
-          <strong>FOLLOW YOUR ORDER'S STATUS STEP-BY-STEP</strong>
+          <strong>FOLLOW YOUR ORDER&apos;S STATUS STEP-BY-STEP</strong>
           <div className="table-responsive my-3">
             <table className="table table-bordered table-striped">
               <thead>

@@ -6,7 +6,7 @@ export default function ProductPageSkeleton() {
       <div
         className="d-flex justify-content-center align-items-center text-center"
         style={{
-          background: "url('/assets/banner.avif') no-repeat top",
+          background: "url(&apos;/assets/banner.avif&apos;) no-repeat top",
           backgroundAttachment: "fixed",
           padding: "70px 15px",
         }}

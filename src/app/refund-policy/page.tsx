@@ -155,12 +155,12 @@ export default function RefundCancellation() {
         <h2>Gifts</h2>
         <p>
           If the Goods were marked as a gift when purchased and then shipped
-          directly to you, You'll receive a gift credit for the value of your
-          return. Once the returned product is received, a gift certificate will
-          be mailed to You.
+          directly to you, You&apos;ll receive a gift credit for the value of
+          your return. Once the returned product is received, a gift certificate
+          will be mailed to You.
         </p>
         <p>
-          If the Goods weren't marked as a gift when purchased, or the gift
+          If the Goods weren&apos;t marked as a gift when purchased, or the gift
           giver had the Order shipped to themselves to give it to You later, We
           will send the refund to the gift giver.
         </p>

@@ -27,10 +27,11 @@ export default function About1() {
         <p style={{ color: "#a5989d" }}>
           Smartwatches have become more of a necessity these days. But buying
           one has become a lot more difficult, considering the wide range of
-          options available. If you browse online, you’ll find Fossil, Samsung,
-          Apple, Mi smart watches. Many smartwatches have built-in fitness
-          features, such as a heart rate sensor and GPS. The Fitbit Versa is
-          promoted as a health device rather than as a smartphone replacement.
+          options available. If you browse online, you&apos;ll find Fossil,
+          Samsung, Apple, Mi smart watches. Many smartwatches have built-in
+          fitness features, such as a heart rate sensor and GPS. The Fitbit
+          Versa is promoted as a health device rather than as a smartphone
+          replacement.
         </p>
         <button
           onClick={() => router.push("/shop")}

@@ -6,10 +6,10 @@ export default function Community() {
       <div className="d-flex flex-column gap-4 w-100 text-secondary">
         <h1 className="fw-bold text-center">Join the Smart Store Community</h1>
         <p>
-          <b>Smart Store Watches</b> is not just a shop; it's a community of
-          watch enthusiasts. Follow us on social media, join our newsletter, and
-          be the first to know about new arrivals, promotions, and exclusive
-          offers. Let's share the excitement of timekeeping together.
+          <b>Smart Store Watches</b> is not just a shop; it&apos;s a community
+          of watch enthusiasts. Follow us on social media, join our newsletter,
+          and be the first to know about new arrivals, promotions, and exclusive
+          offers. Let&apos;s share the excitement of timekeeping together.
         </p>
         <span>
           Thank you for choosing Smart Store Watches—where smart choices meet
