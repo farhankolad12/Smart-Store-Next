@@ -43,7 +43,7 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.smart-store.co.in/order-deatils</loc>
+        <loc>https://www.smart-store.co.in/order</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -54,6 +54,16 @@
     </url>
     <url>
         <loc>https://www.smart-store.co.in/about</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.smart-store.co.in/account</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.smart-store.co.in/add-address</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -73,8 +83,38 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://www.smart-store.co.in/terms-conditions</loc>
+        <loc>https://www.smart-store.co.in/terms-services</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.smart-store.co.in/login</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.smart-store.co.in/signup</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.smart-store.co.in/contact</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.smart-store.co.in/contact</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.smart-store.co.in/forget-password</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://www.smart-store.co.in/reset-password</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
     </url>
 </urlset>
