@@ -7,7 +7,7 @@ Allow: /signup
 Allow: /product
 Allow: /about
 Allow: /privacy-policy
-Allow: /terms-conditions
+Allow: /terms-services
 Allow: /refund-policy
 Disallow: /identity
 Disallow: /address
@@ -18,5 +18,7 @@ Disallow: /orders
 Disallow: /order-details
 Disallow: /wishlist
 Disallow: /order-completed
+Disallow: /reset-password
+Disallow: /forget-password
 
 Sitemap: https://www.smart-store.co.in/sitemap.xml
