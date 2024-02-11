@@ -45,8 +45,8 @@ export default function TermsServices() {
             materials; or
           </li>
           <li>
-            transferring the materials to another person or "mirror" the
-            materials on any other server.
+            transferring the materials to another person or &quot;mirror&quot;
+            the materials on any other server.
           </li>
         </ul>
 
@@ -65,12 +65,12 @@ export default function TermsServices() {
         <h2>3. Disclaimer</h2>
 
         <p>
-          All the materials on Smart Store&apos;s Website are provided "as is".
-          Smart Store makes no warranties, may it be expressed or implied,
-          therefore negates all other warranties. Furthermore, Smart Store does
-          not make any representations concerning the accuracy or reliability of
-          the use of the materials on its Website or otherwise relating to such
-          materials or any sites linked to this Website.
+          All the materials on Smart Store&apos;s Website are provided &quot;as
+          is&quot;. Smart Store makes no warranties, may it be expressed or
+          implied, therefore negates all other warranties. Furthermore, Smart
+          Store does not make any representations concerning the accuracy or
+          reliability of the use of the materials on its Website or otherwise
+          relating to such materials or any sites linked to this Website.
         </p>
 
         <h2>4. Limitations</h2>
