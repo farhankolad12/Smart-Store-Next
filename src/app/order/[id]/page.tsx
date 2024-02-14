@@ -34,7 +34,7 @@ const OrderDetail = () => {
       <div
         className="d-flex justify-content-center align-items-center text-center"
         style={{
-          background: "url(&apos;/assets/banner.jpg&apos;) no-repeat top",
+          background: "url('/assets/banner.jpg') no-repeat top",
           backgroundAttachment: "fixed",
           padding: "70px 15px",
         }}

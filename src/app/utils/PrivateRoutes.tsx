@@ -8,8 +8,8 @@ const withAuth = (Component: any) => {
     const { currentUser } = useAuth();
 
     if (!currentUser) {
-      router.push("/login");
-      return <Login />;
+      return router.replace("/login");
+      // return <Login />;
     }
 
     return <Component />;

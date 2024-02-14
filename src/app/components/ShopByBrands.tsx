@@ -9,6 +9,8 @@ export type BrandType = {
   img: { id: string; link: string };
 };
 
+const PAGE_WIDTH = window.innerWidth;
+
 export default function ShopByBrands(/* {
   brands,
   loading,
@@ -18,7 +20,6 @@ export default function ShopByBrands(/* {
 } */) {
   const { filters, filtersLoading: loading } = useAuth();
 
-  const PAGE_WIDTH = window.innerWidth;
   return (
     <div className="bg-white py-5 my-5">
       <div className="d-flex flex-column gap-2 header text-center my-3 py-4">

@@ -37,7 +37,7 @@ export default function LoginPage() {
   }
 
   useEffect(() => {
-    currentUser && router.push("/account");
+    currentUser && router.replace("/account");
   }, [currentUser]);
 
   return (
@@ -45,7 +45,7 @@ export default function LoginPage() {
       <div
         className="d-flex justify-content-center align-items-center text-center"
         style={{
-          background: "url(&apos;/assets/banner.jpg&apos;) no-repeat top",
+          background: "url('/assets/banner.jpg') no-repeat top",
           backgroundAttachment: "fixed",
           padding: "70px 15px",
         }}

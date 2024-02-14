@@ -96,7 +96,8 @@ export default function AuthContext({ children }: { children: ReactNode }) {
 
   return (
     <AuthProvider.Provider value={value}>
-      {(!loading || !cartLoading || !_loading) && children}
+      {/* {(!loading || !cartLoading || !_loading) && children} */}
+      {!loading && children}
     </AuthProvider.Provider>
   );
 }
