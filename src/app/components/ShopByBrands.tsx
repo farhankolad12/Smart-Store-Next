@@ -9,8 +9,6 @@ export type BrandType = {
   img: { id: string; link: string };
 };
 
-const PAGE_WIDTH = window.innerWidth;
-
 export default function ShopByBrands(/* {
   brands,
   loading,
@@ -18,6 +16,8 @@ export default function ShopByBrands(/* {
   brands: any | undefined;
   loading: boolean | undefined;
 } */) {
+  const PAGE_WIDTH = window.innerWidth;
+
   const { filters, filtersLoading: loading } = useAuth();
 
   return (
