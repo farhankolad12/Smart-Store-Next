@@ -3,6 +3,7 @@
 import React, { ReactNode, useContext, useEffect, useState } from "react";
 import useGetReq from "../hooks/useGetReq";
 import { ProductType } from "../components/LatestProd";
+import PageLoading from "../loading";
 
 type CurrentUser = {
   id: string;
@@ -97,7 +98,7 @@ export default function AuthContext({ children }: { children: ReactNode }) {
   return (
     <AuthProvider.Provider value={value}>
       {/* {(!loading || !cartLoading || !_loading) && children} */}
-      {!loading && children}
+      {loading ? <PageLoading /> : children}
     </AuthProvider.Provider>
   );
 }
